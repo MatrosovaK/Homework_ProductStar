@@ -1,0 +1,29 @@
+package org.example;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessNumber {
+    public static void main (String[] args){
+        Random random = new Random();
+        int numberToGuess = random.nextInt(100) + 1;
+        Scanner in = new Scanner(System.in);
+        int userNumber;
+        while(true){
+            System.out.println("Введите число от 0 до 100");
+            userNumber= in.nextInt();
+            if(userNumber == numberToGuess){
+                System.out.println("Вы угадали число");
+                break;
+            }else if(userNumber < numberToGuess) {
+                System.out.println("Ваше число меньше");
+            } else{
+                System.out.println("Ваше число больше");
+            }
+
+            }
+        in.close();
+        }
+
+
+}
