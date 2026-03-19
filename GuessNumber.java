@@ -15,7 +15,7 @@ public class GuessNumber {
             userNumber= in.nextInt();
             numberOfAttempts++;
             if(userNumber == numberToGuess){
-                System.out.println("Вы угадали число");
+                System.out.println("Вы угадали число c " + numberOfAttempts + " попытки");
                 break;
             }else if(userNumber < numberToGuess) {
                 System.out.println("Ваше число меньше");
