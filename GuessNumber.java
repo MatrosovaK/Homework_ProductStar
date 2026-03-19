@@ -9,9 +9,11 @@ public class GuessNumber {
         int numberToGuess = random.nextInt(100) + 1;
         Scanner in = new Scanner(System.in);
         int userNumber;
+        int numberOfAttempts = 0;
         while(true){
             System.out.println("Введите число от 0 до 100");
             userNumber= in.nextInt();
+            numberOfAttempts++;
             if(userNumber == numberToGuess){
                 System.out.println("Вы угадали число");
                 break;
