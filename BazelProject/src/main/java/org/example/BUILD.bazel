@@ -1,0 +1,11 @@
+load("@rules_java//java:defs.bzl", "java_binary")
+
+java_binary(
+    name = "hello",
+    srcs = ["Main.java"],
+    main_class = "org.example.Main",
+    deps = [
+        "@maven//:org_apache_commons_commons_lang3",
+        "//:my_library_jar",
+    ],
+)

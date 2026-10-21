@@ -1,0 +1,7 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "my_library_jar",
+    jars = ["libs/my-library.jar"],
+    visibility = ["//visibility:public"],
+)
