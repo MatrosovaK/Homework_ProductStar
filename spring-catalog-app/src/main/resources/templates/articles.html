@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог научных статей</title>
+</head>
+<body>
+
+<h1>Каталог научных статей</h1>
+
+<table style="border: 1px solid black; border-collapse: collapse;">
+    <thead>
+    <tr>
+        <th style="border: 1px solid black; padding: 8px;">Название статьи</th>
+        <th style="border: 1px solid black; padding: 8px;">Авторы</th>
+        <th style="border: 1px solid black; padding: 8px;">Год публикации</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="article : ${articles}">
+        <td style="border: 1px solid black; padding: 8px;"
+            th:text="${article.title}"></td>
+
+        <td style="border: 1px solid black; padding: 8px;"
+            th:text="${article.authors}"></td>
+
+        <td style="border: 1px solid black; padding: 8px;"
+            th:text="${article.year}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
